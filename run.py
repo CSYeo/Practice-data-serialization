@@ -20,7 +20,7 @@ for file in os.listdir(directory):
         title = lines[0].strip()
         name = lines[1].strip()
         date = lines[2].strip()
-        feedback = lines[3:].strip()
+        feedback = ''.join(lines[3:]).strip()
 
         dict = {
         "title": title,
@@ -29,6 +29,6 @@ for file in os.listdir(directory):
         "feedback": feedback
         }
 
-    post.append(dict)
+    posts.append(dict)
 
-print[post]
+print(posts)
