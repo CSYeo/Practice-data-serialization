@@ -12,8 +12,10 @@ for file in os.listdir(directory):
     #Here remember to use os.listdir if not it will
     #print directory as a string
 
-    with open(file, 'r') as data:
-        lines = file.readlines()
+    filepath = "{}\\{}".format(directory, file)
+
+    with open(filepath, 'r') as data:
+        lines = data.readlines()
 #lines now will read one line at a time
         title = lines[0].strip()
         name = lines[1].strip()
